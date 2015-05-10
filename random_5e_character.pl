@@ -7,7 +7,7 @@ use Data::Dumper;
 my @aligns_1 = qw/Lawful Chaotic Neutral/;
 my @aligns_2 = qw/Good Neutral Evil/;
 my @classes = qw/Barbarian Fighter Ranger Paladin Monk Bard Rogue Wizard Sorceror Warlock Cleric/;
-my @genders => qw/Male Female/;
+my @genders = qw/Male Female/;
 
 my %races = (
   Human => ['Calishite', 'Chondathan', 'Damaran', 'Illuskan', 'Mulan', 'Rashemi', 'Shou', 'Tehyrian', 'Turami'],
@@ -23,7 +23,7 @@ my %races = (
 
 my %names = (
   ## humans
-  Calishite =>{
+  Calishite => {
     gender => {
       male => qw/Aseir Bardeid Haseid Khemed Mehmen Sudeiman Zasheir/,
       female => qw/Atala Ceidil Hama Jasmal Meilil Seipora Yasheira Zasheida/,
@@ -83,16 +83,16 @@ my %names = (
   ## non-humans
   Elf => {
     gender => {
-      male => qw/Adran, Aelar, Aramil, Arannis, Aust, Beiro, Berrian, Carric , Enialis, Erdan, Erevan, Galinndan, Hadarai, Heian, Himo, Immeral, Ivellios, Laucian, Mindartis, Paelias, Peren, Quarion, Riardon, Rolen, Soveliss, Thamior, Tharivol, Theren, Varis/,
-      female => qw/Adrie, Althaea, Anastrianna, Andraste, Antinua, Bethrynna, Birel, Caelynn, Drusilia, Enna, Felosial, Ielenia, Jelenneth, Keyleth, Leshanna, Lia, Meriele, Mialee, Naivara, Quelenna, Quillathe, Sariel, Shanairra, Shava, Silaqui, Theirastra, Thia, Vadania, Valanthe, Xanaphia/,
+      male => qw/Adran Aelar Aramil Arannis Aust Beiro Berrian Carric  Enialis Erdan Erevan Galinndan Hadarai Heian Himo Immeral Ivellios Laucian Mindartis Paelias Peren Quarion Riardon Rolen Soveliss Thamior Tharivol Theren Varis/,
+      female => qw/Adrie Althaea Anastrianna Andraste Antinua Bethrynna Birel Caelynn Drusilia Enna Felosial Ielenia Jelenneth Keyleth Leshanna Lia Meriele Mialee Naivara Quelenna Quillathe Sariel Shanairra Shava Silaqui Theirastra Thia Vadania Valanthe Xanaphia/,
     },
-    child => qw/Ara, Bryn, Del, Eryn, Faen, Innil. Lael, Mella, Naill, Naeris, Phann, Rael, Rinn, Sai, Syllin, Thia, Vall/,
+    child => qw/Ara Bryn Del Eryn Faen Innil Lael Mella Naill Naeris Phann Rael Rinn Sai Syllin Thia Vall/,
     family => ('Amakiir (Gemflower)', 'Amastacia (Starflower)', 'Galanodel (Moonwhisper)', 'Holimion (Diamonddew)', 'Ilphelkiir (Gemblossom)', 'Liadon (Silverfrond)', 'Meliamne (Oakenheel)', "Nai'lo (Nightbreeze)", 'Siannodel (Moonbrook)', 'Xiloscient (Goldpetal)',),
   },
   Dwarf => {
-    male => qw/Adrik, Alberich, Baern, Barendd, Brottor, Bruenor, Dain, Darrak, Delg, Eberk, Einkil, Fargrim, Flint, Gardain, Harbek, Kildrak, Morgran, Orsik, Oskar, Rangrim, Rurik, Taklinn, Thoradin, Thorin, Tordek, Traubon, Travok, Ulfgar, Veit, Vondal/,
-    female => qw/Amber, Artin, Audhild, Bardryn, Dagnal, Diesa, Eldeth, Falkrunn, Finellen, Gunnloda, Gurdis, Helja, Hlin, Kathra, Kristryd, Ilde, Liftrasa, Mardred, Riswynn, Sannl, Torbera, Torgga, Vistra/,
-    clan => qw/Balderk, Battlehammer, Brawnanvil, Dankil, Fireforge, Frostbeard, Gorunn, Holderhek, Ironfist, Loderr, Lutgehr, Rumnaheim, Strakeln, Torunn, Ungart/,
+    male => qw/Adrik Alberich Baern Barendd Brottor Bruenor Dain Darrak Delg Eberk Einkil Fargrim Flint Gardain Harbek Kildrak Morgran Orsik Oskar Rangrim Rurik Taklinn Thoradin Thorin Tordek Traubon Travok Ulfgar Veit Vondal/,
+    female => qw/Amber Artin Audhild Bardryn Dagnal Diesa Eldeth Falkrunn Finellen Gunnloda Gurdis Helja Hlin Kathra Kristryd Ilde Liftrasa Mardred Riswynn Sannl Torbera Torgga Vistra/,
+    clan => qw/Balderk Battlehammer Brawnanvil Dankil Fireforge Frostbeard Gorunn Holderhek Ironfist Loderr Lutgehr Rumnaheim Strakeln Torunn Ungart/,
   },
   Gnome => {
     gender => {
@@ -103,10 +103,10 @@ my %names = (
   },
   Halfling => {
     gender => {
-      male => qw/Alton, Ander, Cade, Corrin, Eldon, Errich, Finnan, Garret, Lindal, Lyle, Merric, Milo, Osborn, Perrin, Reed, Roscoe, Wellby/,
-      female => qw/Andry, Bree, Callie, Cora, Euphemia, Jillian, Kithri, Lavinia, Lidda, Merla, Nedda, Paela, Portia, Seraphina, Shaena, Trym, Vani, Verna/,
+      male => qw/Alton Ander Cade Corrin Eldon Errich Finnan Garret Lindal Lyle Merric Milo Osborn Perrin Reed Roscoe Wellby/,
+      female => qw/Andry Bree Callie Cora Euphemia Jillian Kithri Lavinia Lidda Merla Nedda Paela Portia Seraphina Shaena Trym Vani Verna/,
     },
-    family => qw/Brushgather, Goodbarrel, Greenbottle, High-hill, Hilltopple, Leagallow, Tealeaf, Thorngage, Tosscobble, Underbough/,
+    family => qw/Brushgather Goodbarrel Greenbottle High-hill Hilltopple Leagallow Tealeaf Thorngage Tosscobble Underbough/,
   },
   Tiefling => {
     gender => {
