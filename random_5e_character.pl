@@ -97,12 +97,18 @@ sub get_a_name {
     next if $name_type eq 'last';
     next if $name_type eq 'surname';
     next if $name_type eq 'child';
+    next if $name_type eq 'nickname';
     $name .= ' of the ' . (ucfirst $name_type) . ' ' . picka($names_for->{$name_type});
   }
 
   ## add on the weird "child" name
   if ($names_for->{child}) {
     $name .= ', named ' . picka($names_for->{child}) . ' as a child';
+  }
+
+  ## add on the nickname
+  if ($names_for->{nickname}) {
+    $name .= ', nicknamed ' . picka($names_for->{nickname});
   }
 
   return "$name";
