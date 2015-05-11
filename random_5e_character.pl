@@ -5,6 +5,10 @@ use warnings;
 use Data::Dumper;
 use YAML::XS 'LoadFile';
 
+##
+## MAIN
+##
+
 my $config = LoadFile("config.yaml");
 
 my $gender = picka($config->{genders});
@@ -19,6 +23,12 @@ printf "%s, a %s %s %s, %s/%s, %s\n"
   ,picka($config->{align_morals})
   ,picka($config->{backgrounds})
   ;
+
+exit;
+
+##
+## SUBROUTINES
+##
 
 ## return a random number from 0 to <input>
 sub rn {
@@ -48,6 +58,7 @@ sub picka {
 
 }
 
+## get a name from the complicated name config
 sub get_a_name {
   my ($race, $gender, $name_config) = @_;
 
@@ -65,13 +76,33 @@ sub get_a_name {
   }
 
   ## each race will different types of names. we're flexible and will get each
-  ## one and combine them
-  my $names = $name_config->{$race_name};
-  my @name_types = keys %$names;
+  ## of them and combine them all
+  my $names_for = $name_config->{$race_name};
+  my @name_types = keys %$names_for;
 
-  my $name = picka($names->{gender}->{lc $gender});
-  if ($names->{last}) {
-    $name .= ' ' . picka($names->{last});
+  ## start with the first name
+  my $name = picka($names_for->{gender}->{lc $gender});
+
+  ## then get the last name
+  if ($names_for->{last}) {
+    $name .= ' ' . picka($names_for->{last});
+  }
+  if ($names_for->{surname}) {
+    $name .= ' ' . picka($names_for->{surname});
+  }
+
+  ## finally assmemble the other names
+  foreach my $name_type (@name_types) {
+    next if $name_type eq 'gender';
+    next if $name_type eq 'last';
+    next if $name_type eq 'surname';
+    next if $name_type eq 'child';
+    $name .= ' of the ' . (ucfirst $name_type) . ' ' . picka($names_for->{$name_type});
+  }
+
+  ## add on the weird "child" name
+  if ($names_for->{child}) {
+    $name .= ', named ' . picka($names_for->{child}) . ' as a child';
   }
 
   return "$name";
