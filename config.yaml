@@ -1,4 +1,3 @@
----
 align_societies:
   - Lawful
   - Chaotic
@@ -75,7 +74,7 @@ names:
   ## humans
   Calishite:
     gender:
-      male:
+      Male:
         - Aseir
         - Bardeid
         - Haseid
@@ -83,7 +82,7 @@ names:
         - Mehmen
         - Sudeiman
         - Zasheir
-      female:
+      Female:
         - Atala
         - Ceidil
         - Hama
@@ -93,16 +92,16 @@ names:
         - Yasheira
         - Zasheida
     last:
-        - Basha
-        - Dumein
-        - Jassan
-        - Khalid
-        - Mostana
-        - Pashar
-        - Rein
-  Chondathan:
+      - Basha
+      - Dumein
+      - Jassan
+      - Khalid
+      - Mostana
+      - Pashar
+      - Rein
+  Chondathan: &chondathan
     gender:
-      male:
+      Male:
         - Darvin
         - Dorn
         - Evendur
@@ -113,7 +112,7 @@ names:
         - Morn
         - Randal
         - Stedd
-      female:
+      Female:
         - Arveene
         - Esvele
         - Jhessail
@@ -124,15 +123,15 @@ names:
         - Shandri
         - Tessele
     surname:
-        - Amblecrown
-        - Buckman
-        - Dundragon
-        - Evenwood
-        - Greycastle
-        - Tallstag
+      - Amblecrown
+      - Buckman
+      - Dundragon
+      - Evenwood
+      - Greycastle
+      - Tallstag
   Damaran:
     gender:
-      male:
+      Male:
         - Bor
         - Fodel
         - Glar
@@ -144,7 +143,7 @@ names:
         - Orel
         - Pavel
         - Sergor
-      female:
+      Female:
         - Alethra
         - Kara
         - Katernin
@@ -154,17 +153,17 @@ names:
         - Tana
         - Zora
     surname:
-        - Bersk
-        - Chernin
-        - Dotsk
-        - Kulenov
-        - Marsk
-        - Nemetsk
-        - Shemov
-        - Starag
+      - Bersk
+      - Chernin
+      - Dotsk
+      - Kulenov
+      - Marsk
+      - Nemetsk
+      - Shemov
+      - Starag
   Illuskan:
     gender:
-      male:
+      Male:
         - Ander
         - Blath
         - Bran
@@ -176,7 +175,7 @@ names:
         - Stor
         - Taman
         - Urth
-      female:
+      Female:
         - Amafrey
         - Betha
         - Cefrey
@@ -186,19 +185,19 @@ names:
         - Silifrey
         - Westra
     surname:
-        - Brightwood
-        - Helder
-        - Hornraven
-        - Lackman
-        - Stormwind
-        - Windrivver
+      - Brightwood
+      - Helder
+      - Hornraven
+      - Lackman
+      - Stormwind
+      - Windrivver
   Mulan:
     gender:
-      male:
+      Male:
         - Aoth
         - Bareris
         - Ehput-Ki Kethoth Mumed Ramas So-Kehur Thazar-De Urhur
-      female:
+      Female:
         - Arizima
         - Chathi
         - Nephis
@@ -209,16 +208,16 @@ names:
         - Umara
         - Zolis
     surname:
-        - Ankhalab
-        - Anskuld
-        - Fezim
-        - Hahpet
-        - Nathandem
-        - Sepret
-        - Uuthrakt
+      - Ankhalab
+      - Anskuld
+      - Fezim
+      - Hahpet
+      - Nathandem
+      - Sepret
+      - Uuthrakt
   Shou:
     gender:
-      male:
+      Male:
         - An
         - Chen
         - Chi
@@ -232,7 +231,7 @@ names:
         - Shan
         - Shui
         - Wen
-      female:
+      Female:
         - Bai
         - Chao
         - Jia
@@ -242,21 +241,22 @@ names:
         - Shui
         - Tai
     surname:
-        - Chien
-        - Huang
-        - Kao
-        - Kung
-        - Lao
-        - Ling
-        - Mei
-        - Pin
-        - Shin
-        - Sum
-        - Tan
-        - Wan
+      - Chien
+      - Huang
+      - Kao
+      - Kung
+      - Lao
+      - Ling
+      - Mei
+      - Pin
+      - Shin
+      - Sum
+      - Tan
+      - Wan
+  Tethyrian: *chondathan
   Turami:
     gender:
-      male:
+      Male:
         - Anton
         - Diero
         - Marcon
@@ -265,7 +265,7 @@ names:
         - Romero
         - Salazar
         - Umbero
-      female:
+      Female:
         - Balama
         - Dona
         - Faila
@@ -288,7 +288,7 @@ names:
   ## non-humans
   Elf:
     gender:
-      male:
+      Male:
         - Adran
         - Aelar
         - Aramil
@@ -318,7 +318,7 @@ names:
         - Tharivol
         - Theren
         - Varis
-      female:
+      Female:
         - Adrie
         - Althaea
         - Anastrianna
@@ -381,61 +381,61 @@ names:
 
   Dwarf:
     gender:
-      male:
-          - Adrik
-          - Alberich
-          - Baern
-          - Barendd
-          - Brottor
-          - Bruenor
-          - Dain
-          - Darrak
-          - Delg
-          - Eberk
-          - Einkil
-          - Fargrim
-          - Flint
-          - Gardain
-          - Harbek
-          - Kildrak
-          - Morgran
-          - Orsik
-          - Oskar
-          - Rangrim
-          - Rurik
-          - Taklinn
-          - Thoradin
-          - Thorin
-          - Tordek
-          - Traubon
-          - Travok
-          - Ulfgar
-          - Veit
-          - Vondal
-      female:
-          - Amber
-          - Artin
-          - Audhild
-          - Bardryn
-          - Dagnal
-          - Diesa
-          - Eldeth
-          - Falkrunn
-          - Finellen
-          - Gunnloda
-          - Gurdis
-          - Helja
-          - Hlin
-          - Kathra
-          - Kristryd
-          - Ilde
-          - Liftrasa
-          - Mardred
-          - Riswynn
-          - Sannl
-          - Torbera
-          - Torgga
-          - Vistra
+      Male:
+        - Adrik
+        - Alberich
+        - Baern
+        - Barendd
+        - Brottor
+        - Bruenor
+        - Dain
+        - Darrak
+        - Delg
+        - Eberk
+        - Einkil
+        - Fargrim
+        - Flint
+        - Gardain
+        - Harbek
+        - Kildrak
+        - Morgran
+        - Orsik
+        - Oskar
+        - Rangrim
+        - Rurik
+        - Taklinn
+        - Thoradin
+        - Thorin
+        - Tordek
+        - Traubon
+        - Travok
+        - Ulfgar
+        - Veit
+        - Vondal
+      Female:
+        - Amber
+        - Artin
+        - Audhild
+        - Bardryn
+        - Dagnal
+        - Diesa
+        - Eldeth
+        - Falkrunn
+        - Finellen
+        - Gunnloda
+        - Gurdis
+        - Helja
+        - Hlin
+        - Kathra
+        - Kristryd
+        - Ilde
+        - Liftrasa
+        - Mardred
+        - Riswynn
+        - Sannl
+        - Torbera
+        - Torgga
+        - Vistra
     clan:
       - Balderk
       - Battlehammer
@@ -455,16 +455,83 @@ names:
 
   Gnome:
     gender:
-      male:
-        - Bob
-      female:
-        - Mary
-    last:
-      - McSweeny
+      Male:
+        - Alston
+        - Alvyn
+        - Boddynock
+        - Brocc
+        - Burgell
+        - Dimble
+        - Eldon
+        - Erky
+        - Fonkin
+        - Frug
+        - Gerbo
+        - Gimble
+        - Glim
+        - Jebeddo
+        - Kellen
+        - Namfoodle
+        - Orryn
+        - Roondar
+        - Seebo
+        - Sindri
+        - Warryn
+        - Wrenn
+        - Zook
+      Female:
+        - Bimpnottin
+        - Breena
+        - Caramip
+        - Carlin
+        - Donella
+        - Duvamil
+        - Ella
+        - Ellyjobell
+        - Ellywick
+        - Lilli
+        - Loopmottin
+        - Lorilla
+        - Mardnab
+        - Nissa
+        - Nyx
+        - Oda
+        - Orla
+        - Roywyn
+        - Shamil
+        - Tana
+        - Waywocket
+        - Zanna
+    clan:
+      - Beren
+      - Daergel
+      - Folkor
+      - Garrick
+      - Nackle
+      - Murnig
+      - Ningel
+      - Raulnor
+      - Scheppen
+      - Timbers
+      - Turen
+    nickname:
+      - Aleslosh
+      - Ashhearth
+      - Badger
+      - Cloak
+      - Doublelock
+      - Filchbatter
+      - Fnipper
+      - Ku
+      - Nim
+      - Oneshoe
+      - Pock
+      - Sparklegem
+      - Stumbleduck
 
   Halfling:
     gender:
-      male:
+      Male:
         - Alton
         - Ander
         - Cade
@@ -482,7 +549,7 @@ names:
         - Reed
         - Roscoe
         - Wellby
-      female:
+      Female:
         - Andry
         - Bree
         - Callie
@@ -515,37 +582,159 @@ names:
 
   Tiefling:
     gender:
-      male:
-        - Bob
-      female:
-        - Mary
-    last:
-      - McSweeny
+      Male:
+        - Akmenos
+        - Amnon
+        - Barakas
+        - Damakos
+        - Ekemon
+        - Iados
+        - Kairon
+        - Leucis
+        - Melech
+        - Mordai
+        - Morthos
+        - Pelaios
+        - Skamos
+        - Therai
+      Female:
+        - Akta
+        - Anakis
+        - Bryseis
+        - Criella
+        - Damaia
+        - Ea
+        - Kallista
+        - Lerissa
+        - Makaria
+        - Nemeia
+        - Orianna
+        - Phelaia
+        - Rieta
+    virtue:
+      - Art
+      - Carrion
+      - Chant
+      - Creed
+      - Despair
+      - Excellence
+      - Fear
+      - Glory
+      - Hope
+      - Ideal
+      - Music
+      - Nowhere
+      - Open
+      - Poetry
+      - Quest
+      - Random
+      - Reverence
+      - Sorrow
+      - Temerity
+      - Torment
+      - Weary
 
   Dragonborne:
     gender:
-      male:
-        - Bob
-      female:
-        - Mary
-    last:
-      - McSweeny
+      Male:
+        - Arjhan
+        - Balasar
+        - Bharash
+        - Donaar
+        - Ghesh
+        - Heskan
+        - Kriv
+        - Medrash
+        - Mehen
+        - Nadarr
+        - Pandjed
+        - Patrin
+        - Rhogar
+        - Shamash
+        - Shedinn
+        - Tarhun
+        - Torinn
+      Female:
+        - Akra
+        - Biri
+        - Daar
+        - Farideh
+        - Harann
+        - Flavilar
+        - Jheri
+        - Kava
+        - Korinn
+        - Mishann
+        - Nala
+        - Perra
+        - Raiann
+        - Sora
+        - Surina
+        - Thava
+        - Uadjit
+    child:
+      - Climber
+      - Earbender
+      - Leaper
+      - Pious
+      - Shieldbiter
+      - Zealous
+    clan:
+      - Clethtinthiallor
+      - Daardendrian
+      - Delmirev
+      - Drachedandion
+      - Fenkenkabradon
+      - Kepeshkmolik
+      - Kerrhylon
+      - Kimbatuul
+      - Linxakasendalor
+      - Myastan
+      - Nemmonis
+      - Norixius
+      - Ophinshtalajiir
+      - Prexijandilin
+      - Shestendeliath
+      - Turnuroth
+      - Verthisathurgiesh
+      - Yarjerit
 
   Half-Elf:
     gender:
-      male:
+      Male:
         - Bob
-      female:
+      Female:
         - Mary
     last:
       - McSweeny
 
   Half-Orc:
     gender:
-      male:
-        - Bob
-      female:
-        - Mary
-    last:
-      - McSweeny
+      Male:
+        - Dench
+        - Feng
+        - Gell
+        - Henk
+        - Holg
+        - Imsh
+        - Keth
+        - Krusk
+        - Mhurren
+        - Ront
+        - Shump
+        - Thokk
+      Female:
+        - Baggi
+        - Emen
+        - Engong
+        - Kansif
+        - Myev
+        - Neega
+        - Ovak
+        - Ownka
+        - Shautha
+        - Sutha
+        - Vola
+        - Volen
+        - Yevelda
 

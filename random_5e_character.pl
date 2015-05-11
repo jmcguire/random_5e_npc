@@ -81,7 +81,7 @@ sub get_a_name {
   my @name_types = keys %$names_for;
 
   ## start with the first name
-  my $name = picka($names_for->{gender}->{lc $gender});
+  my $name = picka($names_for->{gender}->{$gender});
 
   ## then get the last name
   if ($names_for->{last}) {
