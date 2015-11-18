@@ -2,16 +2,11 @@
 
 import yaml
 import random
-import re
-import pprint
 
 
 def main():
   with open("config.yaml") as file:
     config = yaml.load(file)
-
-  #pp = pprint.PrettyPrinter(indent=4)
-  #pp.pprint(config)
 
   gender = picka(config['genders'])
   race = picka(config['races'])
@@ -51,9 +46,6 @@ def picka(picklist):
 def get_a_name(gender, race, name_config):
   """get a name from the complicated name config"""
 
-  print gender
-  print race
-
   ## humans are named for their subrace, but all the other races are named for
   ## their race
   if ' Human' in race:
@@ -65,36 +57,29 @@ def get_a_name(gender, race, name_config):
     ## some races don't have subtypes
     race_name = race
 
-  print race_name
-
   ## each race will different types of names. we're flexible and will get each
   ## of them and combine them all
   names_for = name_config[race_name]
 
   ## start with the first name
   name = picka(names_for['gender'][gender])
-  print name
 
   ## add the normal surname
   if 'surname' in names_for:
     name += ' ' + picka(names_for['surname'])
-  print name
 
   ## add the old-world style surname
   for name_type in ['family', 'clan', 'virtue']:
     if name_type in names_for:
       name += ' of the ' + name_type.title() + ' ' + picka(names_for[name_type])
-  print name
 
   ## add the child name
   if 'child' in names_for:
     name += ', named ' + picka(names_for['child']) + ' as a child'
-  print name
 
   ## add the nickname
   if 'nickname' in names_for:
     name += ', nicknamed ' + picka(names_for['nickname'])
-  print name
 
   return name
 
