@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-random_5e_character.py
+random_5e_npc.py
 
 Generate a simple character for D&D 5e.  It will produce an appropriate
 name based o random race and gender.  All the names are copied from the
