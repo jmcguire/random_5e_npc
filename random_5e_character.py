@@ -1,8 +1,18 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+"""
+random_5e_character.py
+
+Generate a simple character for D&D 5e.  It will produce an appropriate
+name based o random race and gender.  All the names are copied from the
+Players Handbook.  It also adds a random class, alignment, and
+background.
+
+Created by Justin McGuire <jm@landedstar.com>
+Content copyright Wizards of the Coast
+"""
 
 import yaml
 import random
-
 
 def main():
   with open("config.yaml") as file:
@@ -22,9 +32,9 @@ def main():
 
 
 def picka(picklist):
-  """pick a random thing from a list, which could be a range, a list, or a dict"""
+  """pick a random thing, which could be a range, a list, or a dict"""
 
-  ## if it's a hash, we assume it's a has of lists, then we pick one random
+  ## if it's a dict, we assume it's a hash of lists, then we pick one random
   ## key, and then pick on random element from that key's list of items
   if (type(picklist) is dict):
     key = random.choice(picklist.keys())
@@ -40,7 +50,7 @@ def picka(picklist):
 
   ## if it's a number pick a random number from 1 - picklist
   elif (type(picklist) is int):
-    return rand.randint(1, picklist + 1)
+    return random.randint(1, picklist)
 
 
 def get_a_name(gender, race, name_config):
@@ -51,7 +61,7 @@ def get_a_name(gender, race, name_config):
   if ' Human' in race:
     race_name = race.split(' ')[0]
   elif ' ' in race:
-    ## if the race has a subtype, ignore it
+    ## if the race has a subtype, ignore the subtype
     race_name = race.split(' ')[1]
   else:
     ## some races don't have subtypes
@@ -61,27 +71,25 @@ def get_a_name(gender, race, name_config):
   ## of them and combine them all
   names_for = name_config[race_name]
 
-  ## start with the first name
+  ## every race has a gender-based first name
   name = picka(names_for['gender'][gender])
 
-  ## add the normal surname
   if 'surname' in names_for:
     name += ' ' + picka(names_for['surname'])
 
-  ## add the old-world style surname
   for name_type in ['family', 'clan', 'virtue']:
     if name_type in names_for:
       name += ' of the ' + name_type.title() + ' ' + picka(names_for[name_type])
 
-  ## add the child name
   if 'child' in names_for:
     name += ', named ' + picka(names_for['child']) + ' as a child'
 
-  ## add the nickname
   if 'nickname' in names_for:
     name += ', nicknamed ' + picka(names_for['nickname'])
 
   return name
 
-main()
+
+if __name__ == '__main__':
+  main()
 
