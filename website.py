@@ -19,11 +19,11 @@ class index:
   def GET(self):
     return """
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Get a random NPC</title>
-<meta name="description" content="">
+<title>Create a random and well-named NPC for D&D 5e</title>
+<meta name="description" content="Refresh to get a well-named NPC, using names from the 5th Edition Players Handbook">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://reset5.googlecode.com/hg/reset.min.css">
 <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
@@ -68,7 +68,18 @@ margin-top: 1.8em;
 <h1> %s </h1>
 <h2> %s </h2>
 <h3> %s </h3>
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-42761539-2','auto');ga('send','pageview');
+</script>
+<!-- by Justin McGuire, jm@landedstar.com, @landedstar  -->
+<!-- https://github.com/jmcguire/random_5e_npc -->
 """ % ( self.name(), self.race_gender(), self.expanded_info() )
+
 
   def name(self):
     return "%s" % random_5e_npc.get_a_name(self.gender, self.race, self.config['names'])

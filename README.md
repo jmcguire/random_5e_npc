@@ -14,12 +14,20 @@ It also adds a random class, alignment, and background.
 
 ./random_5e_npc.py
 
+## Heroku
+
+There is also a website for this tool, running at
+http://random-5e-npc.herokuapp.com . This project contains everything you need
+to deploy it to your own Heroku domain. It runs with website.py, and is powered
+by web.py.
+
 ## Credits
 
 Programming by Justin McGuire <jm@landedstar.com> @landedstar
 
 ## License
 
-Code is licenced under the MIT licence
+Code is licenced under the MIT licence.
 
-The data in the config file is almost certainly copyrighted by Wizards of the Coast
+The data in the config file is almost certainly copyrighted by Wizards of the Coast.
+
