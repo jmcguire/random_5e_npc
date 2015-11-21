@@ -221,6 +221,33 @@ names:
       ? Nathandem
       ? Sepret
       ? Uuthrakt
+  Rashemi:
+    gender:
+      Male:
+        ? Borivik
+        ? Faurgar
+        ? Jandar
+        ? Kanithar
+        ? Madislak
+        ? Ralmevik
+        ? Shaumar
+        ? Vladislak
+      Female:
+        ? Fyevarra
+        ? Hulmarra
+        ? Immith
+        ? Imzel
+        ? Navarra
+        ? Shevarra
+        ? Tammith
+        ? Yuldra
+    surname:
+        ? Chergoba
+        ? Dyernina
+        ? Iltazyara
+        ? Murnyethara
+        ? Stayanoga
+        ? Ulmokina
   Shou:
     gender:
       Male: &shou_male
