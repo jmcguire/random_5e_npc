@@ -79,7 +79,7 @@ def get_a_name(gender, race, name_config):
 
   for name_type in ['family', 'clan', 'virtue']:
     if name_type in names_for:
-      name += ' of the ' + name_type.title() + ' ' + picka(names_for[name_type])
+      name += ' of the ' + picka(names_for[name_type]) + ' ' + name_type.title()
 
   if 'child' in names_for:
     name += ', named ' + picka(names_for['child']) + ' as a child'
