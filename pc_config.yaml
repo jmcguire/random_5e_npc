@@ -1,25 +1,35 @@
-align_societies:
-  - Lawful
-  - Chaotic
+alignments:
+  - Lawful Good
+  - Neutral Good
+  - Chaotic Good
+  - Lawful Neutral
   - Neutral
-
-align_morals:
-  - Good
-  - Neutral
-  - Evil
+  - Chaotic Neutral
 
 classes:
-  - Barbarian
-  - Fighter
-  - Ranger
-  - Paladin
-  - Monk
-  - Bard
-  - Rogue
-  - Wizard
-  - Sorceror
-  - Warlock
-  - Cleric
+  Cleric:
+    attr_priority: ['Wis','Str','Con','Cha','Dex','Int']
+  Fighter:
+    attr_priority: ['Str','Con','Dex','Wis','Int','Cha']
+  Rogue:
+    attr_priority: ['Dex','Cha','Int','Con','Str','Wis']
+  Wizard:
+    attr_priority: ['Int','Dex','Wis','Cha','Con','Str']
+
+#  Barbarian:
+#    ability_priority: ['Str','Con','foo','foo','foo','foo']
+#  Bard:
+#    ability_priority: ['Cha','foo','foo','foo','foo','foo']
+#  Monk:
+#    ability_priority: ['Dex','Wis','foo','foo','foo','foo']
+#  Paladin:
+#    ability_priority: ['Str','Cha','foo','foo','foo','foo']
+#  Ranger:
+#    ability_priority: ['Dex','Wis','foo','foo','foo','foo']
+#  Sorceror:
+#    ability_priority: ['Cha','foo','foo','foo','foo','foo']
+#  Warlock:
+#    ability_priority: ['Cha','foo','foo','foo','foo','foo']
 
 genders:
   - Male
@@ -34,7 +44,7 @@ races:
     - Mulan
     - Rashemi
     - Shou
-    - Tehyrian
+    - Tethyrian
     - Turami
   Elf:
     - High
@@ -54,21 +64,86 @@ races:
   Half-Elf:
   Half-Orc:
 
+attribute_mods:
+  Human:
+    Str: 1
+    Con: 1
+    Dex: 1
+    Int: 1
+    Wis: 1
+    Cha: 1
+  Elf:
+    High: 
+      Dex: 2
+      Int: 1
+    Wood: 
+      Dex: 2
+      Wis: 1
+    Drow: 
+      Dex: 2
+      Cha: 1
+  Dwarf:
+    Hill: 
+      Con: 2
+      Wis: 1
+    Mountain: 
+      Con: 2
+      Str: 2
+  Gnome:
+    Forest: 
+      Int: 2
+      Dex: 1
+    Rock: 
+      Int: 2
+      Con: 1
+  Halfling:
+    Lightfoot: 
+      Dex: 2
+      Cha: 1
+    Stout: 
+      Dex: 2
+      Con: 1
+  Tiefling: 
+    Cha: 2
+    Int: 1
+  Dragonborne: 
+    Str: 2
+    Cha: 1
+  Half-Elf: 
+    Cha: 2
+  Half-Orc: 
+    Str: 2
+    Con: 1
+
 backgrounds:
+  - Acolyte
   - Acolyte
   - Charlatan
   - Criminal
-  - Folk
-  - Hero
-  - Guild
-  - Artisan
+  - Criminal
+  - Entertainer
+  - Folk Hero
+  - Folk Hero
+  - Guild Artisian
+  - Guild Artisian
   - Hermit
   - Noble
   - Outlander
+  - Outlander
   - Sage
   - Sailor
+  - Sailor
+  - Soldier
   - Soldier
   - Urchin
+
+attr_arrays:
+  - [18, 14, 12,  8,  8,  6]
+  - [16, 14, 14, 10, 10,  8]
+  - [16, 16, 12, 10,  8,  8]
+  - [16, 12, 12, 12, 10,  8]
+  - [14, 14, 12, 12, 12, 12]
+  - [14, 14, 14, 12, 12, 10]
 
 names:
   ## humans

@@ -1,0 +1,773 @@
+align_societies:
+  - Lawful
+  - Chaotic
+  - Neutral
+
+align_morals:
+  - Good
+  - Neutral
+  - Evil
+
+classes:
+  - Barbarian
+  - Fighter
+  - Ranger
+  - Paladin
+  - Monk
+  - Bard
+  - Rogue
+  - Wizard
+  - Sorceror
+  - Warlock
+  - Cleric
+
+genders:
+  - Male
+  - Female
+
+races:
+  Human:
+    - Calishite
+    - Chondathan
+    - Damaran
+    - Illuskan
+    - Mulan
+    - Rashemi
+    - Shou
+    - Tethyrian
+    - Turami
+  Elf:
+    - High
+    - Wood
+    - Drow
+  Dwarf:
+    - Hill
+    - Mountain
+  Gnome:
+    - Forest
+    - Rock
+  Halfling:
+    - Lightfoot
+    - Stout
+  Tiefling:
+  Dragonborne:
+  Half-Elf:
+  Half-Orc:
+
+backgrounds:
+  - Acolyte
+  - Charlatan
+  - Criminal
+  - Entertainer
+  - Folk
+  - Hero
+  - Guild Artisan
+  - Hermit
+  - Noble
+  - Outlander
+  - Sage
+  - Sailor
+  - Soldier
+  - Urchin
+
+names:
+  ## humans
+  Calishite:
+    gender:
+      Male: &calishite_male
+        ? Aseir
+        ? Bardeid
+        ? Haseid
+        ? Khemed
+        ? Mehmen
+        ? Sudeiman
+        ? Zasheir
+      Female: &calishite_female
+        ? Atala
+        ? Ceidil
+        ? Hama
+        ? Jasmal
+        ? Meilil
+        ? Seipora
+        ? Yasheira
+        ? Zasheida
+    surname: &calishite_surname
+      ? Basha
+      ? Dumein
+      ? Jassan
+      ? Khalid
+      ? Mostana
+      ? Pashar
+      ? Rein
+  Chondathan: &chondathan
+    gender:
+      Male: &chondathan_male
+        ? Darvin
+        ? Dorn
+        ? Evendur
+        ? Gorstag
+        ? Grim
+        ? Helm
+        ? Malark
+        ? Morn
+        ? Randal
+        ? Stedd
+      Female: &chondathan_female
+        ? Arveene
+        ? Esvele
+        ? Jhessail
+        ? Kerri
+        ? Lureene
+        ? Miri
+        ? Rowan
+        ? Shandri
+        ? Tessele
+    surname: &chondathan_surname
+      ? Amblecrown
+      ? Buckman
+      ? Dundragon
+      ? Evenwood
+      ? Greycastle
+      ? Tallstag
+  Damaran:
+    gender:
+      Male: &damaran_male
+        ? Bor
+        ? Fodel
+        ? Glar
+        ? Grigor
+        ? Igan
+        ? Ivor
+        ? Kosef
+        ? Mival
+        ? Orel
+        ? Pavel
+        ? Sergor
+      Female: &damaran_female
+        ? Alethra
+        ? Kara
+        ? Katernin
+        ? Mara
+        ? Natali
+        ? Olma
+        ? Tana
+        ? Zora
+    surname: &damaran_surname
+      ? Bersk
+      ? Chernin
+      ? Dotsk
+      ? Kulenov
+      ? Marsk
+      ? Nemetsk
+      ? Shemov
+      ? Starag
+  Illuskan:
+    gender:
+      Male: &illuskan_male
+        ? Ander
+        ? Blath
+        ? Bran
+        ? Frath
+        ? Geth
+        ? Lander
+        ? Luth
+        ? Malcer
+        ? Stor
+        ? Taman
+        ? Urth
+      Female: &illuskan_female
+        ? Amafrey
+        ? Betha
+        ? Cefrey
+        ? Kethra
+        ? Mara
+        ? Olga
+        ? Silifrey
+        ? Westra
+    surname: &illuskan_surname
+      ? Brightwood
+      ? Helder
+      ? Hornraven
+      ? Lackman
+      ? Stormwind
+      ? Windrivver
+  Mulan:
+    gender:
+      Male: &mulan_male
+        ? Aoth
+        ? Bareris
+        ? Ehput-Ki
+        ? Kethoth
+        ? Mumed
+        ? Ramas
+        ? So-Kehur
+        ? Thazar-De
+        ? Urhur
+      Female: &mulan_female
+        ? Arizima
+        ? Chathi
+        ? Nephis
+        ? Nulara
+        ? Murithi
+        ? Sefris
+        ? Thola
+        ? Umara
+        ? Zolis
+    surname: &mulan_surname
+      ? Ankhalab
+      ? Anskuld
+      ? Fezim
+      ? Hahpet
+      ? Nathandem
+      ? Sepret
+      ? Uuthrakt
+  Rashemi:
+    gender:
+      Male:
+        ? Borivik
+        ? Faurgar
+        ? Jandar
+        ? Kanithar
+        ? Madislak
+        ? Ralmevik
+        ? Shaumar
+        ? Vladislak
+      Female:
+        ? Fyevarra
+        ? Hulmarra
+        ? Immith
+        ? Imzel
+        ? Navarra
+        ? Shevarra
+        ? Tammith
+        ? Yuldra
+    surname:
+        ? Chergoba
+        ? Dyernina
+        ? Iltazyara
+        ? Murnyethara
+        ? Stayanoga
+        ? Ulmokina
+  Shou:
+    gender:
+      Male: &shou_male
+        ? An
+        ? Chen
+        ? Chi
+        ? Fai
+        ? Jiang
+        ? Jun
+        ? Lian
+        ? Long
+        ? Meng
+        ? On
+        ? Shan
+        ? Shui
+        ? Wen
+      Female: &shou_female
+        ? Bai
+        ? Chao
+        ? Jia
+        ? Lei
+        ? Mei
+        ? Qiao
+        ? Shui
+        ? Tai
+    surname: &shou_surname
+      ? Chien
+      ? Huang
+      ? Kao
+      ? Kung
+      ? Lao
+      ? Ling
+      ? Mei
+      ? Pin
+      ? Shin
+      ? Sum
+      ? Tan
+      ? Wan
+  Tethyrian: *chondathan
+  Turami:
+    gender:
+      Male: &turami_male
+        ? Anton
+        ? Diero
+        ? Marcon
+        ? Pieron
+        ? Rimardo
+        ? Romero
+        ? Salazar
+        ? Umbero
+      Female: &turami_female
+        ? Balama
+        ? Dona
+        ? Faila
+        ? Jalana
+        ? Luisa
+        ? Marta
+        ? Quara
+        ? Selise
+        ? Vonda
+    surname: &turami_surname
+      ? Agosto
+      ? Astorio
+      ? Calabra
+      ? Domine
+      ? Falone
+      ? Marivaldi
+      ? Pisacar
+      ? Ramondo
+
+  ## non-humans
+  Elf:
+    gender:
+      Male: &elf_male
+        ? Adran
+        ? Aelar
+        ? Aramil
+        ? Arannis
+        ? Aust
+        ? Beiro
+        ? Berrian
+        ? Carric 
+        ? Enialis
+        ? Erdan
+        ? Erevan
+        ? Galinndan
+        ? Hadarai
+        ? Heian
+        ? Himo
+        ? Immeral
+        ? Ivellios
+        ? Laucian
+        ? Mindartis
+        ? Paelias
+        ? Peren
+        ? Quarion
+        ? Riardon
+        ? Rolen
+        ? Soveliss
+        ? Thamior
+        ? Tharivol
+        ? Theren
+        ? Varis
+      Female: &elf_female
+        ? Adrie
+        ? Althaea
+        ? Anastrianna
+        ? Andraste
+        ? Antinua
+        ? Bethrynna
+        ? Birel
+        ? Caelynn
+        ? Drusilia
+        ? Enna
+        ? Felosial
+        ? Ielenia
+        ? Jelenneth
+        ? Keyleth
+        ? Leshanna
+        ? Lia
+        ? Meriele
+        ? Mialee
+        ? Naivara
+        ? Quelenna
+        ? Quillathe
+        ? Sariel
+        ? Shanairra
+        ? Shava
+        ? Silaqui
+        ? Theirastra
+        ? Thia
+        ? Vadania
+        ? Valanthe
+        ? Xanaphia
+    child:
+      ? Ara
+      ? Bryn
+      ? Del
+      ? Eryn
+      ? Faen
+      ? Innil
+      ? Lael
+      ? Mella
+      ? Naill
+      ? Naeris
+      ? Phann
+      ? Rael
+      ? Rinn
+      ? Sai
+      ? Syllin
+      ? Thia
+      ? Vall
+    family: &elf_family
+      ? Amakiir (Gemflower)
+      ? Amastacia (Starflower)
+      ? Galanodel (Moonwhisper)
+      ? Holimion (Diamonddew)
+      ? Ilphelkiir (Gemblossom)
+      ? Liadon (Silverfrond)
+      ? Meliamne (Oakenheel)
+      ? Nai''lo (Nightbreeze)
+      ? Siannodel (Moonbrook)
+      ? Xiloscient (Goldpetal)
+
+  Dwarf:
+    gender:
+      Male:
+        - Adrik
+        - Alberich
+        - Baern
+        - Barendd
+        - Brottor
+        - Bruenor
+        - Dain
+        - Darrak
+        - Delg
+        - Eberk
+        - Einkil
+        - Fargrim
+        - Flint
+        - Gardain
+        - Harbek
+        - Kildrak
+        - Morgran
+        - Orsik
+        - Oskar
+        - Rangrim
+        - Rurik
+        - Taklinn
+        - Thoradin
+        - Thorin
+        - Tordek
+        - Traubon
+        - Travok
+        - Ulfgar
+        - Veit
+        - Vondal
+      Female:
+        - Amber
+        - Artin
+        - Audhild
+        - Bardryn
+        - Dagnal
+        - Diesa
+        - Eldeth
+        - Falkrunn
+        - Finellen
+        - Gunnloda
+        - Gurdis
+        - Helja
+        - Hlin
+        - Kathra
+        - Kristryd
+        - Ilde
+        - Liftrasa
+        - Mardred
+        - Riswynn
+        - Sannl
+        - Torbera
+        - Torgga
+        - Vistra
+    clan:
+      - Balderk
+      - Battlehammer
+      - Brawnanvil
+      - Dankil
+      - Fireforge
+      - Frostbeard
+      - Gorunn
+      - Holderhek
+      - Ironfist
+      - Loderr
+      - Lutgehr
+      - Rumnaheim
+      - Strakeln
+      - Torunn
+      - Ungart
+
+  Gnome:
+    gender:
+      Male:
+        - Alston
+        - Alvyn
+        - Boddynock
+        - Brocc
+        - Burgell
+        - Dimble
+        - Eldon
+        - Erky
+        - Fonkin
+        - Frug
+        - Gerbo
+        - Gimble
+        - Glim
+        - Jebeddo
+        - Kellen
+        - Namfoodle
+        - Orryn
+        - Roondar
+        - Seebo
+        - Sindri
+        - Warryn
+        - Wrenn
+        - Zook
+      Female:
+        - Bimpnottin
+        - Breena
+        - Caramip
+        - Carlin
+        - Donella
+        - Duvamil
+        - Ella
+        - Ellyjobell
+        - Ellywick
+        - Lilli
+        - Loopmottin
+        - Lorilla
+        - Mardnab
+        - Nissa
+        - Nyx
+        - Oda
+        - Orla
+        - Roywyn
+        - Shamil
+        - Tana
+        - Waywocket
+        - Zanna
+    clan:
+      - Beren
+      - Daergel
+      - Folkor
+      - Garrick
+      - Nackle
+      - Murnig
+      - Ningel
+      - Raulnor
+      - Scheppen
+      - Timbers
+      - Turen
+    nickname:
+      - Aleslosh
+      - Ashhearth
+      - Badger
+      - Cloak
+      - Doublelock
+      - Filchbatter
+      - Fnipper
+      - Ku
+      - Nim
+      - Oneshoe
+      - Pock
+      - Sparklegem
+      - Stumbleduck
+
+  Halfling:
+    gender:
+      Male:
+        - Alton
+        - Ander
+        - Cade
+        - Corrin
+        - Eldon
+        - Errich
+        - Finnan
+        - Garret
+        - Lindal
+        - Lyle
+        - Merric
+        - Milo
+        - Osborn
+        - Perrin
+        - Reed
+        - Roscoe
+        - Wellby
+      Female:
+        - Andry
+        - Bree
+        - Callie
+        - Cora
+        - Euphemia
+        - Jillian
+        - Kithri
+        - Lavinia
+        - Lidda
+        - Merla
+        - Nedda
+        - Paela
+        - Portia
+        - Seraphina
+        - Shaena
+        - Trym
+        - Vani
+        - Verna
+    family:
+      - Brushgather
+      - Goodbarrel
+      - Greenbottle
+      - High-hill
+      - Hilltopple
+      - Leagallow
+      - Tealeaf
+      - Thorngage
+      - Tosscobble
+      - Underbough
+
+  Tiefling:
+    gender:
+      Male:
+        - Akmenos
+        - Amnon
+        - Barakas
+        - Damakos
+        - Ekemon
+        - Iados
+        - Kairon
+        - Leucis
+        - Melech
+        - Mordai
+        - Morthos
+        - Pelaios
+        - Skamos
+        - Therai
+      Female:
+        - Akta
+        - Anakis
+        - Bryseis
+        - Criella
+        - Damaia
+        - Ea
+        - Kallista
+        - Lerissa
+        - Makaria
+        - Nemeia
+        - Orianna
+        - Phelaia
+        - Rieta
+    virtue:
+      - Art
+      - Carrion
+      - Chant
+      - Creed
+      - Despair
+      - Excellence
+      - Fear
+      - Glory
+      - Hope
+      - Ideal
+      - Music
+      - Nowhere
+      - Open
+      - Poetry
+      - Quest
+      - Random
+      - Reverence
+      - Sorrow
+      - Temerity
+      - Torment
+      - Weary
+
+  Dragonborne:
+    gender:
+      Male:
+        - Arjhan
+        - Balasar
+        - Bharash
+        - Donaar
+        - Ghesh
+        - Heskan
+        - Kriv
+        - Medrash
+        - Mehen
+        - Nadarr
+        - Pandjed
+        - Patrin
+        - Rhogar
+        - Shamash
+        - Shedinn
+        - Tarhun
+        - Torinn
+      Female:
+        - Akra
+        - Biri
+        - Daar
+        - Farideh
+        - Harann
+        - Flavilar
+        - Jheri
+        - Kava
+        - Korinn
+        - Mishann
+        - Nala
+        - Perra
+        - Raiann
+        - Sora
+        - Surina
+        - Thava
+        - Uadjit
+    child:
+      - Climber
+      - Earbender
+      - Leaper
+      - Pious
+      - Shieldbiter
+      - Zealous
+    clan:
+      - Clethtinthiallor
+      - Daardendrian
+      - Delmirev
+      - Drachedandion
+      - Fenkenkabradon
+      - Kepeshkmolik
+      - Kerrhylon
+      - Kimbatuul
+      - Linxakasendalor
+      - Myastan
+      - Nemmonis
+      - Norixius
+      - Ophinshtalajiir
+      - Prexijandilin
+      - Shestendeliath
+      - Turnuroth
+      - Verthisathurgiesh
+      - Yarjerit
+
+  Half-Elf:
+    gender:
+      Male:
+        << : [ *calishite_male, *chondathan_male, *damaran_male, *illuskan_male, *mulan_male, *shou_male, *turami_male, *elf_male ]
+      Female:
+        << : [ *calishite_female, *chondathan_female, *damaran_female, *illuskan_female, *mulan_female, *shou_female, *turami_female, *elf_female ]
+    surname:
+      << : [ *calishite_surname, *chondathan_surname, *damaran_surname, *illuskan_surname, *mulan_surname, *turami_surname, *elf_family ]
+
+  Half-Orc:
+    gender:
+      Male:
+        - Dench
+        - Feng
+        - Gell
+        - Henk
+        - Holg
+        - Imsh
+        - Keth
+        - Krusk
+        - Mhurren
+        - Ront
+        - Shump
+        - Thokk
+      Female:
+        - Baggi
+        - Emen
+        - Engong
+        - Kansif
+        - Myev
+        - Neega
+        - Ovak
+        - Ownka
+        - Shautha
+        - Sutha
+        - Vola
+        - Volen
+        - Yevelda
+

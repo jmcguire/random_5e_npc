@@ -21,6 +21,11 @@ http://random-5e-npc.herokuapp.com . This project contains everything you need
 to deploy it to your own Heroku domain. It runs with website.py, and is powered
 by web.py.
 
+## TODO
+
+This config-driven monstrosity is hitting its limits for its current level of
+structure. This thing needs some proper objects.
+
 ## Credits
 
 Programming by Justin McGuire <jm@landedstar.com> @landedstar
