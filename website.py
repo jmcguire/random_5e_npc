@@ -11,10 +11,22 @@ urls = (
 class index:
 
   def __init__(self):
-    with open("config.yaml") as file:
+    with open("pc_config.yaml") as file:
       self.config = yaml.load(file)
     self.gender = random_5e_npc.picka(self.config['genders'])
     self.race = random_5e_npc.picka(self.config['races'])
+    self.class_ = random_5e_npc.picka(self.config['classes'].keys())
+
+    self.name = random_5e_npc.get_a_name(self.gender, self.race, self.config['names'])
+    self.alignment = random_5e_npc.picka(self.config['alignments'])
+    self.background = random_5e_npc.picka(self.config['backgrounds'])
+
+    self.attr_score = random_5e_npc.get_attributes(random_5e_npc.picka(self.config['attr_arrays']),
+                                                   self.config['classes'][self.class_]['attr_priority'],
+                                                   random_5e_npc.get_racial_mods(self.race, self.config['attribute_mods']))
+    self.attr_string = ', '.join(map(lambda x: "<b>%s:</b> %d" % (x, self.attr_score[x]), ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha']))
+
+
 
   def GET(self):
     return """
@@ -66,7 +78,7 @@ margin-top: 1.8em;
 }
 </style>
 <h1> %s </h1>
-<h2> %s </h2>
+<h2> %s %s (%s, %s, %s) </h2>
 <h3> %s </h3>
 <script>
 (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -78,21 +90,9 @@ ga('create','UA-42761539-2','auto');ga('send','pageview');
 </script>
 <!-- by Justin McGuire, jm@landedstar.com, @landedstar  -->
 <!-- https://github.com/jmcguire/random_5e_npc -->
-""" % ( self.name(), self.race_gender(), self.expanded_info() )
-
-
-  def name(self):
-    return "%s" % random_5e_npc.get_a_name(self.gender, self.race, self.config['names'])
-
-  def race_gender(self):
-    return "a %s %s" % (self.gender, self.race)
-
-  def expanded_info(self):
-    return "(%s, %s/%s, %s)" % (
-      random_5e_npc.picka(self.config['classes']),
-      random_5e_npc.picka(self.config['align_societies']),
-      random_5e_npc.picka(self.config['align_morals']),
-      random_5e_npc.picka(self.config['backgrounds']))
+""" % (self.name,
+       self.gender, self.race, self.class_, self.alignment, self.background,
+       self.attr_string)
 
 
 if __name__ == "__main__": 
