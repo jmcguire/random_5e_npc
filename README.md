@@ -28,7 +28,7 @@ structure. This thing needs some proper objects.
 
 ## Credits
 
-Programming by Justin McGuire <jm@landedstar.com> @landedstar
+Justin McGuire &mdash; <jm@landedstar.com> &mdash; <a href="https://twitter.com/landedstar">@landedstar.com</a> &mdash; http://landedstar.com
 
 ## License
 
